@@ -9,13 +9,15 @@ const app = express()
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://posting-photos-xpuy.vercel.app"
+        "https://posting-photos-lzhe.vercel.app/",
+        "http://localhost:5173"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   })
 );
+
+app.options("*", cors())
 
 app.use(express.json())
 
