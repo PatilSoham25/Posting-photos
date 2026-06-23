@@ -10,7 +10,6 @@ app.use(cors({
       "http://localhost:5173",
       "https://posting-photos-xpuy.vercel.app"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
 app.use(express.json())
