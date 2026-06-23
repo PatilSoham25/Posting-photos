@@ -5,7 +5,14 @@ const postModel = require('./models/post.model')
 const cors = require('cors')
 
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: [
+      "http://localhost:5173",
+      "https://posting-photos-xpuy.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}))
 app.use(express.json())
 
 const upload = multer({storage:multer.memoryStorage()})
