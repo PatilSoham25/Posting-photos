@@ -9,8 +9,8 @@ const app = express()
 app.use(
   cors({
     origin: [
-        "https://posting-photos-lzhe.vercel.app/",
-        "http://localhost:5173"
+        "http://localhost:5173",
+        "https://posting-photos-lzhe.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
