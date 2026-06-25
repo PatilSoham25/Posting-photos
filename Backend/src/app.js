@@ -21,6 +21,11 @@ app.options("*", cors())
 
 app.use(express.json())
 
+// ADD THIS HERE
+app.get("/", (req, res) => {
+  res.send("Backend Working");
+});
+
 const upload = multer({storage:multer.memoryStorage()})
 
 
